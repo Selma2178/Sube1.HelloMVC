@@ -1,0 +1,28 @@
+﻿@model List<Ogrenci>
+@{
+    ViewData["Title"] = "Ogrenci Listesi";
+    ViewData["Desc"] = "Tüm okulda Okuyan Öğrencilerin Listesi ";
+} 
+
+    <table class="table">
+        <thead class="thead-dark">
+           <tr>
+               <th>Ad</th>
+                <th>Soyad</th>
+                <th>Numara</th>
+           </tr>
+      </thead>
+      <tbody>
+          @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Ad</td>
+                    <td>@item.Soyad</td>
+                    <td>@item.Numara</td>
+
+                </tr>
+            }
+      </tbody>
+  </table>
+ 
+
